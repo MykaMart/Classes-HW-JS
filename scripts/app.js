@@ -32,6 +32,13 @@ class Dog extends pets {
 	}
 }
 
-const spot = new Dog("spot", 399);
-spot.setOwner("steve");
-console.log(spot);
+// const spot = new Dog("spot", 399);
+// spot.setOwner("steve");
+// console.log(spot);
+
+// 3.
+
+const sparky = new Dog("sparky", 150);
+sparky.setOwner("lacey");
+console.log(sparky);
+

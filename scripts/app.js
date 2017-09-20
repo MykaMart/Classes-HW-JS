@@ -13,3 +13,25 @@ class pets {
 // const fluffy = new pets("fluffy");
 // fluffy.setOwner("john");
 // console.log(fluffy);
+
+// 2.
+
+class Dog extends pets {
+	constructor(name, price) {
+		super(name)
+		this.price = price
+	}
+	bark () {
+		console.log("bark")
+	}
+	chaseTail() {
+		console.log("oh boy oh boy oh boy")
+	}
+	getPrice() {
+		console.log(price)
+	}
+}
+
+const spot = new Dog("spot", 399);
+spot.setOwner("steve");
+console.log(spot);

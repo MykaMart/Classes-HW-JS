@@ -66,6 +66,61 @@ const sprinkles = new Cat("sprinkles", 190);
 sprinkles.setOwner("jayla");
 console.log(sprinkles);
 
+// 6.
+
+class Person {
+	constructor(name){
+		this.name = name
+		this.age = 0
+		this.weight = 0
+		this.mood = 0
+		this.pets = []
+		this.bankAccount = 0
+	}
+	getName() {
+		console.log(this.name);
+	}
+	getAge() {
+		console.log(this.age);
+	}
+	getWeight() {
+		console.log(this.weight);
+	}
+	greet(other_person) {
+		console.log("Hello " + other_person +"!");
+	}
+	eat() {
+		this.weight = this.weight + 3;
+		this.mood = this.mood + 5;
+	}
+	excerise() {
+		this.weight = this.weight -1;
+	}
+	aging() {
+		this.age = this.age + 1;
+		this.weight = this.weight + 2;
+		this.mood = this.mood - 1;
+		this.bankAccount =  this.bankAccount + 10;
+	}
+	buyPet(pet) {
+		this.pets.push(pet)
+		this.bankAccount = this.bankAccount - sparky.price
+	}
+}
+
+const Jill = new Person("Jill")
+
+for (i = 1; i <= 32; i++) {
+	Jill.aging();
+}
+
+for (i = 1; i <= 30; i++) {
+	Jill.eat();
+}
+
+Jill.buyPet(sparky)
+
+console.log(Jill);
 
 
 

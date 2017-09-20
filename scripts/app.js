@@ -42,3 +42,38 @@ const sparky = new Dog("sparky", 150);
 sparky.setOwner("lacey");
 console.log(sparky);
 
+// 4.
+
+class Cat extends pets {
+	constructor(name, price) {
+		super(name)
+		this.price = price
+	}
+	purr() {
+		console.log("purrrrr");
+	}
+	clean() {
+		console.log("cleaning");
+	}
+	getPrice(){
+		console.log(price);
+	}
+}
+
+// 5.
+
+const sprinkles = new Cat("sprinkles", 190);
+sprinkles.setOwner("jayla");
+console.log(sprinkles);
+
+
+
+
+
+
+
+
+
+
+
+

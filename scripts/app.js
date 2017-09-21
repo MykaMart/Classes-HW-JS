@@ -123,6 +123,64 @@ Jill.buyPet(sparky)
 console.log(Jill);
 
 
+///Factories
+	
+
+//1. 
+
+class shoe {
+	constructor(brand, serialNumber) {
+		this.brand = brand
+		this.serialNumber = serialNumber
+	}
+}
+
+class factory {
+	constructor(brand) {
+		this.brand = brand
+		this.pairs = []
+	}
+	makeShoes(){
+		const newPair = new shoe(this.brand, this.pairs.length);
+		this.pairs.push(newPair);
+		return newPair;
+	}
+}
+
+const nike =  new factory("Nike")
+nike.makeShoes();
+nike.makeShoes();
+
+console.log(nike.pairs);
+
+class store {
+	constructor(mallName, storeNumber) {
+		this.mallName = mallName
+		this.storeNumber = storeNumber
+	}
+}
+
+// 2. 
+
+class mall {
+	constructor(mallName) {
+		this.mallName = mallName
+		this.stores = []
+	}
+	generateStore(){
+		const newStore = new store(this.mallName, this.stores.length);
+		this.stores.push(newStore);
+		return newStore
+	}
+}
+
+const  woodfield = new mall("woodfield")
+woodfield.generateStore();
+woodfield.generateStore();
+
+console.log(woodfield.stores);
+
+
 
 
 
